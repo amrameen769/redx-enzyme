@@ -11,7 +11,7 @@ describe("fetchPosts action", () => {
     moxios.uninstall();
   });
 
-  it("store updated correctly", () => {
+  it("store updated correctly", async () => {
     const expectedState = [
       {
         title: "Test Title 1",
@@ -29,7 +29,7 @@ describe("fetchPosts action", () => {
 
     const store = testStore();
 
-    moxios.wait(() => {
+    await moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
         status: 200,
