@@ -45,7 +45,7 @@ class App extends Component {
           />
           <SharedButton {...buttonProps} />
           {posts.length > 0 && (
-            <div>
+            <div className="appList">
               {posts.map((post, index) => {
                 const { title, body } = post;
                 const configListItem = {

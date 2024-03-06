@@ -2,7 +2,6 @@ import App from "./App";
 import { shallow } from 'enzyme';
 import { testStore } from './utils';
 import React from "react";
-import { Provider } from "react-redux";
 
 
 const setup = (initialState = {}) => {
@@ -40,7 +39,7 @@ describe('<App />', () => {
     })
 
     it('should render without errors', () => {
-        const component = wrapper.find('.app')
+        const component = wrapper.find('.appList')
         expect(component.exists()).toBe(true)
     })
 })
